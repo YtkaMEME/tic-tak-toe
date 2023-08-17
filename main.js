@@ -1,5 +1,6 @@
 import createPlaygrount from "./scripts/playgrount.js";
 import gameHistory from "./scripts/gameHistory.js";
+import startSearch from "./scripts/search.js";
 
 //ВРЕМЕННО!!! НАДО БРАТЬ С СЕРВЕРА
 let persons = [
@@ -24,7 +25,7 @@ let persons = [
 ];
 
 
-
+document.querySelector('.button').addEventListener('click', startSearch);
 persons.forEach((elem)=>gameHistory(elem));
 
 createPlaygrount();

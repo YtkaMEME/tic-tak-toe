@@ -10,6 +10,7 @@
 }
 html,
 body {
+    min-width: 320px;
     display: flex;
     padding: 0;
     margin: 0 auto;
@@ -59,7 +60,7 @@ body {
 
 
 
-
+/*for info*/
 .info{
     display: flex;
     position: relative;
@@ -114,6 +115,7 @@ body {
 }
 
 
+/*for playground*/
 .playground{
     display: grid;
     grid-template-columns: 93.3px 93.3px 93.3px;
@@ -132,7 +134,7 @@ body {
 }
 
 
-
+/*for enemy button*/
 .enemy{
     margin-top: 8px;
 
@@ -170,7 +172,11 @@ body {
     background-color: #736093;
 }
 
+.button:disabled{
+    background-color: #828282;
+}
 
+/*for game history*/
 .gameHistory{
     display: flex;
     width: 280px;
@@ -210,13 +216,21 @@ body {
     max-width: 144px;
 
     overflow: hidden;
-    color: #DF3939;
+    color: #000;
     text-overflow: ellipsis;
 
     font-size: 14px;
     font-style: oblique;
     font-weight: 400;
     line-height: normal;
+}
+
+.win {
+    color: #50B04E;
+}
+
+.lose {
+    color: #DF3939;
 }
 
 .pointsGameHistory{
@@ -254,6 +268,34 @@ body {
 
     color: #FFF;
     text-align: center;
+    font-family: Okta Neue;
+    font-size: 12px;
+    font-style: oblique;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/*for timer*/
+.timer{
+    position: absolute;
+    top: 6px;
+    left: 167px;
+
+
+    display: flex;
+    width: 106px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background-color: #736093;
+
+
+    color: #FFF;
+    text-align: center;
+
     font-family: Okta Neue;
     font-size: 12px;
     font-style: oblique;
