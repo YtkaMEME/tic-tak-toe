@@ -1,3 +1,4 @@
+let timeIsOut = false;
 
 function timer(countDownTime, elem, x=false){
     let now = new Date().getTime();
@@ -11,21 +12,22 @@ function timer(countDownTime, elem, x=false){
     if (distance < 0) {
         if(x)clearInterval(x);
         elem.innerHTML = "EXPIRED";
+        timeIsOut = true;
     }
 }
 
 function startTimer(){
     let timerElem = document.querySelector('.timer');
 
-    let countDownTime = new Date().getTime() + 60000;
+    let countDownTime = new Date().getTime() + 10000;
 
     setTimeout(()=>{
         timer(countDownTime, timerElem);
     },0);
 
-    let x = setInterval(function() {
+    let intervalId = setInterval(function() {
 
-        timer(countDownTime, timerElem, x);
+        timer(countDownTime, timerElem, intervalId);
 
     }, 1000);
 

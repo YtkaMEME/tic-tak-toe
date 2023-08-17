@@ -1,4 +1,5 @@
 import startTimer from "./timer/timer.js";
+import game from "./game/game.js";
 
 //по задумке тут запрос к серверу и получение инфы о сопернике
 function getEnemyInfo(){
@@ -29,6 +30,7 @@ function startGame(elem){
 
     parentElem.append(newDiv);
     startTimer();
+    document.querySelector('.playground').addEventListener('click', game)
 }
 
 
