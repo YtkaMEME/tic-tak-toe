@@ -15,8 +15,8 @@ function startGame(elem){
 
     let enemyInfo = getEnemyInfo();
 
-    elem.style.display = 'none';
-    let parentElem = elem.parentElement;
+    let parentElem = elem.parentElement.parentElement;
+    elem.parentElement.style.display = 'none';
 
     let newDiv = document.createElement('div');
 
@@ -25,8 +25,7 @@ function startGame(elem){
 
     newDiv.innerHTML = `<div class = "name">${enemyInfo.name}</div>
         <div class= "pointsGameHistory">${enemyInfo.points} баллов</div>
-        <div class="timer"></div>
-        `;
+        <div class="timer"></div>`;
 
     parentElem.append(newDiv);
     startTimer();
