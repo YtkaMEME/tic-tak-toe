@@ -1,19 +1,12 @@
 import startTimer from "./timer/timer.js";
 import game from "./game/game.js";
+import {gameInfo} from "../../state/state.js";
 
-//по задумке тут запрос к серверу и получение инфы о сопернике
-function getEnemyInfo(){
-    let info = {
-        name: 'Вячеслав Носов',
-        points: 586,
-    };
 
-    return (info);
-}
 
 function startGame(elem){
 
-    let enemyInfo = getEnemyInfo();
+    let enemyInfo = gameInfo.enemyInfo;
 
     let parentElem = elem.parentElement.parentElement;
     elem.parentElement.style.display = 'none';
